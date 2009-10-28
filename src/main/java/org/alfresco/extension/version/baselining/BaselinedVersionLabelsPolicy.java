@@ -100,7 +100,7 @@ public class BaselinedVersionLabelsPolicy
      */
     public void beforeCreateVersion(final NodeRef nodeRef)
     {
-        // Ugh this is a horribly nasty hack, but until ETHREEOH-3183 is fixed there's no real way around it. *sigh*
+        // This is a horribly nasty hack, but until ETHREEOH-3183 is fixed there's no real way around it.
         savedNodeRef.set(nodeRef);
     }
 
