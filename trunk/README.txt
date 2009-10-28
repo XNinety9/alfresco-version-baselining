@@ -1,12 +1,11 @@
 Description
 -----------
 An extension for the Alfresco open source CMS that allows content contributors
-to manually baseline the version numbers, rather than being forced to start at
-the Alfresco default version of 1.0.
+to manually baseline version numbers.
 
 This is particularly useful if the latest version of a document is being
 ingested from elsewhere and the current version number has to be preserved in
-Alfresco but the full version history itself does not.
+Alfresco but the full version history does not.
 
 Please don't hesitate to contact the author if you'd like to contribute!
 
