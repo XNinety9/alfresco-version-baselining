@@ -7,7 +7,7 @@
   <artifactId>alfresco-version-baselining</artifactId>
   <packaging>amp</packaging>
   <!-- Comment the previous line and uncomment the following line if you wish to generate an Eclipse project.
-       The Maven Eclipse plugin does the wrong thing if packaging != jar. -->
+       The Maven Eclipse plugin generates the wrong Eclipse project type if packaging != jar. -->
 <!--
   <packaging>jar</packaging>
 -->
@@ -52,31 +52,12 @@
       <classifier>labs</classifier>
       <scope>provided</scope>
     </dependency>
-    <dependency>
-      <groupId>org.alfresco</groupId>
-      <artifactId>alfresco-webscript-framework</artifactId>
-      <version>3.0Stable</version>
-      <classifier>labs</classifier>
-      <scope>provided</scope>
-    </dependency>
 -->
 
     <!-- Alfresco Enterprise 3.1SP1 -->
     <dependency>
       <groupId>org.alfresco</groupId>
-      <artifactId>alfresco-core</artifactId>
-      <version>3.1.1</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.alfresco</groupId>
       <artifactId>alfresco-repository</artifactId>
-      <version>3.1.1</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.alfresco</groupId>
-      <artifactId>alfresco-webscript-framework</artifactId>
       <version>3.1.1</version>
       <scope>provided</scope>
     </dependency>

@@ -47,5 +47,7 @@ TODOS
 * Test with custom sub-types of vb:VersionBaselinedContent, to ensure that
   they also get picked up by this functionality.
 
+* Consider introducing label ids and message bundles for the property sheet.
+
 * Review the fix for https://issues.alfresco.com/jira/browse/ETHREEOH-3183
   when it becomes available.
