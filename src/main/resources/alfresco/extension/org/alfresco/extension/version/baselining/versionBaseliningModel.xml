@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="vb:versionbaselining" xmlns="http://www.alfresco.org/model/dictionary/1.0">
+
+  <description>Version Baselining Content Model</description>
+  <author>Peter Monks (pmonks@alfresco.com)</author>
+  <published>2009-10-23</published>
+  <version>1.0</version>
+
+  <imports>
+    <import uri="http://www.alfresco.org/model/dictionary/1.0" prefix="d" />
+    <import uri="http://www.alfresco.org/model/content/1.0"    prefix="cm" />
+  </imports>
+
+  <namespaces>
+    <namespace uri="http://www.alfresco.com/custom/extension/version/baselining/1.0" prefix="vb" />
+  </namespaces>
+
+  <constraints>
+    <constraint name="vb:decimal" type="REGEX">
+      <parameter name="expression"><value>[0-9]++\.[0-9]++</value></parameter>
+      <parameter name="requiresMatch"><value>true</value></parameter>
+    </constraint>
+  </constraints>
+
+  <types>
+    <type name="vb:VersionBaselinedContent">
+      <title>Version Baselined Content</title>
+      <parent>cm:content</parent>
+      <properties>
+        <property name="vb:BaseVersion">
+          <title>Base Version</title>
+          <type>d:text</type>
+          <mandatory>true</mandatory>
+          <default>0.1</default>
+          <constraints>
+            <constraint ref="vb:decimal"/>
+          </constraints>
+         </property>
+      </properties>
+    </type>
+  </types>
+
+</model>
