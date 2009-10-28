@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alfresco-config>
+
+  <!-- Add vb:VersionBaselinedContent to list of available content types in the Create Content Wizard -->
+  <config evaluator="string-compare" condition="Content Wizards" replace="false">
+    <content-types>
+      <type name="vb:VersionBaselinedContent" />
+    </content-types>
+  </config>
+
+
+  <!-- Property sheet for vb:BaseVersioned -->
+  <config evaluator="node-type" condition="vb:VersionBaselinedContent">
+    <property-sheet>
+      <show-property name="vb:BaseVersion" display-label="Base Version Number" show-in-view-mode="false" />
+    </property-sheet>
+  </config>
+
+
+  <!-- Other Action Wizards -->
+  <config evaluator="string-compare" condition="Action Wizards" replace="false">
+    <subtypes>
+      <type name="vb:VersionBaselinedContent" />
+    </subtypes>
+
+    <specialise-types>
+      <type name="vb:VersionBaselinedContent" />
+    </specialise-types>
+  </config>
+
+</alfresco-config>

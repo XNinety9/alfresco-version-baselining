@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE beans PUBLIC '-//SPRING//DTD BEAN//EN' 'http://www.springframework.org/dtd/spring-beans.dtd'>
+<beans>
+
+  <!-- Custom content model -->
+  <bean id="alfresco-version-baselining.dictionaryBootstrap"
+        parent="dictionaryModelBootstrap"
+        depends-on="dictionaryBootstrap">
+    <property name="models">
+      <list>
+        <value>alfresco/extension/org/alfresco/extension/version/baselining/versionBaseliningModel.xml</value>
+      </list>
+    </property>
+  </bean>
+
+  <!-- Explorer UI customisations -->
+  <bean id="alfresco-version-baselining.configBootstrap"
+        class="org.alfresco.web.config.WebClientConfigBootstrap"
+        init-method="init">
+    <property name="configs">
+      <list>
+        <value>classpath:alfresco/extension/org/alfresco/extension/version/baselining/web-client-config-custom.xml</value>
+      </list>
+    </property>
+  </bean>
+
+  <!-- Custom version labeling policy - baselined version numbers -->
+  <bean id="alfresco-version-baselining.baselinedVersionLabelsPolicy"
+        class="org.alfresco.extension.version.baselining.BaselinedVersionLabelsPolicy"
+        init-method="init"
+        lazy-init="false"
+        depends-on="alfresco-version-baselining.dictionaryBootstrap">
+    <property name="policyComponent" ref="policyComponent" />
+    <property name="nodeService"     ref="nodeService" />
+  </bean>
+
+</beans>
