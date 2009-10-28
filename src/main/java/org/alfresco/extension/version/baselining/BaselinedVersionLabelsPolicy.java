@@ -121,7 +121,7 @@ public class BaselinedVersionLabelsPolicy
         {
             NodeRef nodeRef = savedNodeRef.get();
             
-            if (nodeRef != null && TYPE_VERSION_BASELINED_CONTENT.equals(nodeService.getType(nodeRef)))
+            if (nodeRef != null)
             {
                 String baseVersion = (String)nodeService.getProperty(nodeRef, PROPERTY_BASE_VERSION_NUMBER);
                 
